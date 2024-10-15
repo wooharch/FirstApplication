@@ -41,7 +41,7 @@ jobs:
           context: .
           platforms: ${{ matrix.platform }}  # Multi-platform 빌드
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/${{ github.repository }}:${{ github.sha }}
+          tags: ghcr.io/${{ github.repository_owner }}/firstproject:${{ github.sha }}
 
       # 6. Optional: 빌드 성공 알림
       - name: Notify build success
