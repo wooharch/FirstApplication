@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: firstproject
+  labels:
+    app: firstproject
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: firstproject
+  template:
+    metadata:
+      labels:
+        app: firstproject
+    spec:
+      containers:
+        - name: firstproject
+          image: ghcr.io/wooharch/firstproject:latest
+          ports:
+            - containerPort: 8080
+
